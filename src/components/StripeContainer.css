@@ -1,0 +1,26 @@
+/* StripeContainer.css */
+
+.FormGroup {
+    margin-bottom: 20px;
+  }
+  
+  .FormRow {
+    width: 100%;
+  }
+  
+  .StripeContainer form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .SuccessMessage {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    border-radius: 5px;
+  }
+  
+  /* Add more styles as needed */
+  

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import StripeContainer from './components/StripeContainer';
+import logo from './logo.svg';
+import itemImage from './4263123.jpg';
 
 function App() {
+  const [showItem, setShowItem] = useState(false);
+
+  const handleShowItemClick = () => {
+    setShowItem(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Test</h1>
+      <button onClick={handleShowItemClick}>Show Item</button>
+      {showItem ? (
+        <>
+          <StripeContainer />
+          <button>Purchase</button>
+        </>
+      ) : (
+        <>
+          <h3>$10.00</h3>
+          <img src={itemImage} alt="Item" />
+        </>
+      )}
     </div>
   );
 }
